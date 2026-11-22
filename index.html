@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sivaadithya M · Data Analyst</title>
+<meta name="description" content="Sivaadithya M — Data Analyst in Chennai with 3+ years at IIT Madras. SQL, MySQL, Advanced Excel, Google Sheets, Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fa; --surface:#ffffff; --text:#14181f; --muted:#5b6472; --line:#e3e6eb;
+  --accent:#1f5fa8; --accent-soft:#e8f0fa; --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1116; --surface:#161b22; --text:#e6e9ee; --muted:#9aa4b2; --line:#262d37;
+    --accent:#6aa8f0; --accent-soft:#16263a; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1116; --surface:#161b22; --text:#e6e9ee; --muted:#9aa4b2; --line:#262d37;
+  --accent:#6aa8f0; --accent-soft:#16263a; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;font-size:16px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{font-weight:800;color:var(--text);letter-spacing:.2px}
+.links{display:flex;gap:18px;align-items:center}
+.links a{color:var(--muted);font-size:14px;font-weight:500}
+.links a:hover{color:var(--text);text-decoration:none}
+.theme-btn{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px}
+@media (max-width:640px){.links a.hide-sm{display:none}}
+
+/* hero */
+.hero{padding:72px 0 48px}
+.eyebrow{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:13px;padding:4px 12px;border-radius:999px;margin-bottom:16px}
+h1{font-size:clamp(34px,6vw,52px);line-height:1.1;margin:0 0 12px;letter-spacing:-.02em}
+.lead{font-size:clamp(17px,2.2vw,19px);color:var(--muted);max-width:640px;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--text);background:var(--surface)}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn.primary{color:#0e1116}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.primary{color:#0e1116}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:13px}
+@media (max-width:520px){.stats{grid-template-columns:1fr}}
+
+/* sections */
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin:0 0 22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+.job+.job{margin-top:16px}
+.job-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px}
+.job h3{margin:0;font-size:18px}
+.org{color:var(--muted);font-size:15px}
+.date{color:var(--muted);font-size:14px;font-weight:500;white-space:nowrap}
+.job ul{margin:12px 0 0;padding-left:20px}
+.job li{margin:6px 0}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:640px){.skills{grid-template-columns:1fr}}
+.skills h4{margin:0 0 10px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:500;padding:5px 11px;border-radius:999px}
+
+.list{display:grid;gap:12px}
+.item{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.item b{font-weight:600}
+.item .sub{color:var(--muted);font-size:14px}
+
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.contact-grid a{display:block;color:var(--text)}
+.contact-grid a:hover{text-decoration:none;border-color:var(--accent)}
+.contact-grid small{display:block;color:var(--muted);font-size:13px}
+.contact-grid strong{font-weight:600;word-break:break-word}
+footer{padding:32px 0 48px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Sivaadithya M</a>
+    <div class="links">
+      <a href="#experience" class="hide-sm">Experience</a>
+      <a href="#skills" class="hide-sm">Skills</a>
+      <a href="#education" class="hide-sm">Education</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <span class="eyebrow">Open to Data Analyst / MIS / Business Analyst roles</span>
+    <h1>Sivaadithya M</h1>
+    <p class="lead">Data Analyst in Chennai with 3+ years at IIT Madras, turning raw data into accurate, decision-ready reports using SQL, Advanced Excel, Google Sheets and Python.</p>
+    <div class="cta">
+      <a class="btn primary" href="Sivaadithya_M_Resume.pdf" download>Download Resume</a>
+      <a class="btn" href="mailto:adithyasiva32@gmail.com">Email Me</a>
+      <a class="btn" href="https://www.linkedin.com/in/sivaadithya-m-42253b202" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>3+ yrs</b><span>Data analysis at IIT Madras</span></div>
+      <div class="stat"><b>SQL · Excel</b><span>Cleaning, validation, reporting</span></div>
+      <div class="stat"><b>Python</b><span>Pandas &amp; NumPy automation</span></div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p style="margin:0;max-width:720px">I work on statistical data analysis, data cleaning, validation and reporting. My day-to-day involves writing SQL/MySQL queries, building pivot-table and formula-driven reports in Excel and Google Sheets, and automating repetitive data preparation with Python. I care about accuracy and consistency, and about getting the right report to the right people on schedule.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card job">
+      <div class="job-head">
+        <div><h3>Project Associate (Data Analyst)</h3><div class="org">Indian Institute of Technology, Madras · Chennai · Full-time</div></div>
+        <div class="date">Oct 2023 – Present</div>
+      </div>
+      <ul>
+        <li>Perform statistical data analysis on project datasets to support research and administrative decisions.</li>
+        <li>Clean, validate and de-duplicate raw data using SQL/MySQL queries, Excel and Google Sheets to ensure accuracy and consistency.</li>
+        <li>Build recurring reports and summaries using pivot tables, advanced formulas (XLOOKUP, INDEX-MATCH, SUMIFS) and charts.</li>
+        <li>Use Python (Pandas, NumPy) to automate data preparation and repetitive checks.</li>
+        <li>Coordinate with project teams to define data requirements and deliver reports on schedule.</li>
+      </ul>
+    </div>
+    <div class="card job">
+      <div class="job-head">
+        <div><h3>Assistant</h3><div class="org">Schneider Electric · Chennai · Full-time</div></div>
+        <div class="date">Mar 2022 – May 2022</div>
+      </div>
+      <ul>
+        <li>Supported operations and process-improvement activities in a manufacturing environment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><h4>Data &amp; Querying</h4><div class="chips"><span class="chip">SQL</span><span class="chip">MySQL</span><span class="chip">Data Cleaning</span><span class="chip">Data Validation</span><span class="chip">Reporting</span></div></div>
+      <div class="card"><h4>Spreadsheets</h4><div class="chips"><span class="chip">Advanced Excel</span><span class="chip">Pivot Tables</span><span class="chip">XLOOKUP / INDEX-MATCH</span><span class="chip">SUMIFS</span><span class="chip">Google Sheets</span></div></div>
+      <div class="card"><h4>Programming</h4><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">LinkedIn Python Assessment ✓</span></div></div>
+      <div class="card"><h4>Analysis</h4><div class="chips"><span class="chip">Statistical Analysis</span><span class="chip">Data Visualization</span><span class="chip">Process Optimization</span></div></div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card list">
+      <div class="item"><div><b>Advanced Formulas 30-Day Challenge</b><div class="sub">Collins School of Data</div></div><div class="date">Sep 2026</div></div>
+      <div class="item"><div><b>Excel Data Analysis for Professionals and Analysts</b><div class="sub">Udemy</div></div><div class="date">Sep 2026</div></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card list">
+      <div class="item"><div><b>B.E., Electrical and Electronics Engineering</b><div class="sub">Anna University (Vaigai College of Engineering) · CGPA 7.08</div></div><div class="date">2018 – 2022</div></div>
+      <div class="item"><div><b>Higher Secondary</b><div class="sub">St. Thomas Higher Secondary School</div></div><div class="date">2016 – 2018</div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <a class="card" href="mailto:adithyasiva32@gmail.com"><small>Email</small><strong>adithyasiva32@gmail.com</strong></a>
+      <a class="card" href="https://www.linkedin.com/in/sivaadithya-m-42253b202" target="_blank" rel="noopener"><small>LinkedIn</small><strong>sivaadithya-m-42253b202</strong></a>
+      <div class="card"><small>Location</small><strong>Chennai, Tamil Nadu</strong></div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Sivaadithya M</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var root = document.documentElement, key = 'theme';
+  try { var saved = localStorage.getItem(key); if (saved) root.setAttribute('data-theme', saved); } catch(e){}
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(key, next); } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
